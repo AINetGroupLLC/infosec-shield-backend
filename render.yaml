@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-net-shield-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://www.ainetstrategies.com,https://ainetstrategies.com
